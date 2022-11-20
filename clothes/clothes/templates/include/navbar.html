@@ -1,0 +1,17 @@
+<ul class="nav nav-pills m-5 d-flex justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link active" href="{% url 'homepage' %}">All items</a>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+           aria-expanded="false">Categories</a>
+        <div class="dropdown-menu">
+            {% for category in categories %}
+            <a class="dropdown-item" href="{% url 'category_name' category.id %}">{{ category.category }}</a>
+            {% endfor %}
+        </div>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Contacts</a>
+    </li>
+</ul>
