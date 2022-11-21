@@ -11,7 +11,7 @@ def basic_view(request):
 
 def category_list(request, category_v):
     categories = Category.objects.all()
-    categories_filter = Product.objects.filter(category_name=category_v)
+    categories_filter = Product.objects.filter(category_name__category=category_v)
     return render(request, 'clothes/category_filter.html', context={
                                                             'categories_filter': categories_filter,
                                                             'categories': categories})

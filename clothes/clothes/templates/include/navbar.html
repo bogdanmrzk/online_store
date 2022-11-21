@@ -1,4 +1,10 @@
-<ul class="nav nav-pills m-5 d-flex justify-content-center">
+{% load static %}
+<head>
+    <link href="{% static '../css/main.css' %}" rel="stylesheet">
+</head>
+
+
+<ul class="nav nav-pills m-5 d-flex justify-content-center navbar_c">
     <li class="nav-item">
         <a class="nav-link active" href="{% url 'homepage' %}">All items</a>
     </li>
@@ -7,7 +13,7 @@
            aria-expanded="false">Categories</a>
         <div class="dropdown-menu">
             {% for category in categories %}
-            <a class="dropdown-item" href="{% url 'category_name' category.id %}">{{ category.category }}</a>
+            <a class="dropdown-item" href="{% url 'category_name' category.category %}">{{ category.category | title }}</a>
             {% endfor %}
         </div>
     </li>

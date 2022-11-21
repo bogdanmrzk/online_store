@@ -1,0 +1,15 @@
+li{
+    margin: 0px 65px;
+}
+
+.d-flex{
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 33%;
+}
+
+.nav-link{
+    color: blue;
+}
